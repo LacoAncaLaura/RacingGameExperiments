@@ -10,7 +10,11 @@ public class Car {
     String color;
     double fuelLevel;
     boolean damaged;
-    //has-a relationsheep / Aggregation
+    boolean GPS;
+    int sits;
+    double price;
+
+    //has-a relationship / Aggregation
     Engine engine;
 
 

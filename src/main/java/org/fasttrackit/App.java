@@ -41,6 +41,8 @@ public class App
 
 
 
+
+
         //concatenation
         System.out.println("Properties of " + carReference.name);
         System.out.println("Color: " + carReference.color);
@@ -64,5 +66,27 @@ public class App
         System.out.println("Color: " + car2.color);
         System.out.println("Damaged: " + car2.damaged);
 
-        }
+        engine1.color = "blue";
+        engine1.electric = false;
+        engine1.screws = 100;
+
+        //concatenation
+
+        System.out.println("Properties of:" + engine1.color);
+        System.out.println("Electric:" + engine1.electric);
+        System.out.println("Screws:" + engine1.screws);
+
+        car2.GPS = true;
+        car2.price = 10000;
+        car2.sits = 4;
+
+        //concatenation
+
+        System.out.println("Properties of:" + car2.GPS);
+        System.out.println("Price:" + car2.price);
+        System.out.println("Sits:" + car2.sits);
+
+
+
+     }
 }
