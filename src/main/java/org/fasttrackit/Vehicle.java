@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Vehicle {
 
     //instance variables
@@ -37,5 +39,10 @@ public class Vehicle {
 
 
         return travelDistance;
+    }
+
+    public void decelerate (){
+        //TODO: implement this
+        System.out.println("This is just a demo method");
     }
 }
