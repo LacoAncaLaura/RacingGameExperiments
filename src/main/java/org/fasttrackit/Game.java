@@ -4,6 +4,7 @@ import com.sun.tools.jdeprscan.scan.Scan;
 
 import java.util.Scanner;
 
+
 public class Game {
     
     public  void start(){
@@ -17,7 +18,8 @@ public class Game {
     {
         System.out.println("Please enter vehicle name: ");
         Scanner scanner = new Scanner(System.in);
-       return scanner.nextLine();
+        //TODO: Solve this "nextLine" Ask EDIIII!!! and uncomment!!!
+        //return scanner.nextLine();
     }
     private int getPlayerCountFromUser(){
         System.out.println("Please enter number of players");
