@@ -10,6 +10,11 @@ public class App
 {
     public static void main( String[] args )
     {
+        Game game = new Game();
+        game.start();
+
+        new AutoVehicle(new Engine());
+
         System.out.println("Please enter vehicle name: ");
         Scanner scanner = new Scanner(System.in);
         String vehicleName = scanner.nextLine();
@@ -19,7 +24,11 @@ public class App
 
         System.out.println( "Welcome to the racing game!" );
 
-        Car carReference = new Car();
+        Engine engine1 = new Engine();
+        engine1.manufacturer = "VW";
+        engine1.capacity = 2000;
+
+        Car carReference = new Car(new Engine());
         carReference.name = "Audi";
         carReference.color = "red";
         carReference.maxSpeed = 260;
@@ -33,13 +42,7 @@ public class App
 //        carReference.engine.manufacturer = "VW";
 //        carReference.engine.capacity = 2000 ;
 
-        Engine engine1 = new Engine();
 
-
-        engine1.manufacturer = "VW";
-        engine1.capacity = 2000;
-
-        carReference.engine = engine1;
 
         double currentDistance = carReference.accelerate(60, 1);
 
@@ -80,7 +83,7 @@ public class App
 //        carReference = null;
 
 
-        Car car2 = new Car();
+        Car car2 = new Car(new Engine());
         car2.name = "Lamborghini";
         car2.damaged = true;
 
