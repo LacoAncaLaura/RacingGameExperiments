@@ -1,6 +1,5 @@
 package org.fasttrackit;
 
-import org.w3c.dom.ls.LSOutput;
 
 public class Vehicle {
 
@@ -8,20 +7,25 @@ public class Vehicle {
     static int totalVehicleCount;
 
     //instance variables
-    int racingNumber;
-    String name;
-    int maxSpeed;
-    double mileage;
-    String color;
-    double fuelLevel;
-    double totalDistance;
-    boolean damaged;
-    boolean GPS;
-    int sits;
-    double price;
+    private int racingNumber;
+    private String name;
+    private int maxSpeed;
+    private double mileage;
+    private String color;
+    private double fuelLevel;
+    private double totalDistance;
+    private boolean damaged;
+    private boolean GPS;
+    private int sits;
+    private double price;
 
     public  Vehicle(){
         totalVehicleCount++;
+    }
+
+    //method overLoading
+    public  double accelerate (double speed){
+        return accelerate(speed,1);
     }
 
     public double accelerate (double speed, double durationInHours) {
@@ -71,4 +75,92 @@ public class Vehicle {
         //TODO: implement this
         System.out.println("This is just a demo method");
     }
-}
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getRacingNumber() {
+        return racingNumber;
+    }
+
+    public void setRacingNumber(int racingNumber) {
+        this.racingNumber = racingNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(double mileage) {
+        this.mileage = mileage;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getFuelLevel() {
+        return fuelLevel;
+    }
+
+    public void setFuelLevel(double fuelLevel) {
+        this.fuelLevel = fuelLevel;
+    }
+
+    public double getTotalDistance() {
+        return totalDistance;
+    }
+
+    public void setTotalDistance(double totalDistance) {
+        this.totalDistance = totalDistance;
+    }
+
+    public boolean isDamaged() {
+        return damaged;
+    }
+
+    public void setDamaged(boolean damaged) {
+        this.damaged = damaged;
+    }
+
+    public boolean isGPS() {
+        return GPS;
+    }
+
+    public void setGPS(boolean GPS) {
+        this.GPS = GPS;
+    }
+
+    public int getSits() {
+        return sits;
+    }
+
+    public void setSits(int sits) {
+        this.sits = sits;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+        }
+
