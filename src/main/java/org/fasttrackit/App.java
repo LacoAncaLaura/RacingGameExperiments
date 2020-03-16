@@ -81,7 +81,7 @@ public class App
 
 
         Car car2 = new Car();
-        car2.name = "Lambourghini";
+        car2.name = "Lamborghini";
         car2.damaged = true;
 
 
@@ -110,7 +110,7 @@ public class App
         System.out.println("Price:" + car2.price);
         System.out.println("Sits:" + car2.sits);
 
-        //modul (modulo) operator
+        //modal (modulo) operator
         //System.out.println(4 % 2);
         //System.out.println(4 % 2 == 0);
         //System.out.println(4 % 3);
