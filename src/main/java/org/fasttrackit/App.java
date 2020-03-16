@@ -14,16 +14,16 @@ public class App
       //  game.start();
 
         Vehicle vehicle1 = new Vehicle();
-        vehicle1.totalVehicleCount = 1;
+        //vehicle1.getTotalVehicleCount() = 1;
 
         Vehicle vehicle2 = new Vehicle();
-        vehicle2.totalVehicleCount = 2;
+        //vehicle2.getTotalVehicleCount() = 2;
 
-        Vehicle.totalVehicleCount = 50;
+        //Vehicle.getTotalVehicleCount() = 50;
 
-        System.out.println("Total count from vehicle1: " + vehicle1.totalVehicleCount);
-        System.out.println("Total count from vehicle2: " + vehicle2.totalVehicleCount);
-        System.out.println("Total count from Vehicle class: " + Vehicle.totalVehicleCount);
+        System.out.println("Total count from vehicle1: " + vehicle1.getTotalVehicleCount());
+        System.out.println("Total count from vehicle2: " + vehicle2.getTotalVehicleCount());
+        System.out.println("Total count from Vehicle class: " + Vehicle.getTotalVehicleCount());
 
 
         new AutoVehicle(new Engine());

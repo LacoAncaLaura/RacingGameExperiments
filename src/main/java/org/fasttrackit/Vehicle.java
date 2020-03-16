@@ -4,7 +4,7 @@ package org.fasttrackit;
 public class Vehicle {
 
     // static variable/ class variable
-    static int totalVehicleCount;
+    private static int totalVehicleCount;
 
     //instance variables
     private int racingNumber;
@@ -162,5 +162,10 @@ public class Vehicle {
     public void setPrice(double price) {
         this.price = price;
     }
-        }
+
+    //read-only property
+    public static int getTotalVehicleCount() {
+        return totalVehicleCount;
+    }
+}
 
