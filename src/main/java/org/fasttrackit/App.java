@@ -13,6 +13,19 @@ public class App
         Game game = new Game();
         game.start();
 
+        //String pool
+        String a = "test";
+        String b = "test";
+        String c =new String("test");
+
+        System.out.println(a == b);
+        System.out.println(a.equals(c));
+
+        if (a == b || (a.equals(c) && true)){
+            System.out.println("Something");
+        }
+
+
 ////Method implementation taken from object class,not from variable`s class
 //        Vehicle cheater = new CheatingVehicle();
 //        cheater.setName("Cheater");
