@@ -19,9 +19,7 @@ public class Vehicle {
     private int sits;
     private double price;
 
-    public  Vehicle(){
-        totalVehicleCount++;
-    }
+    public  Vehicle(){ totalVehicleCount++; }
 
     //method overLoading
     public  double accelerate (double speed){
@@ -74,6 +72,10 @@ public class Vehicle {
     public void decelerate (){
         //TODO: implement this
         System.out.println("This is just a demo method");
+    }
+    //co-variant return type
+    protected Vehicle clone(){
+        return new Vehicle();
     }
     public void setName(String name){
         this.name = name;
@@ -166,6 +168,23 @@ public class Vehicle {
     //read-only property
     public static int getTotalVehicleCount() {
         return totalVehicleCount;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "racingNumber=" + racingNumber +
+                ", name='" + name + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", mileage=" + mileage +
+                ", color='" + color + '\'' +
+                ", fuelLevel=" + fuelLevel +
+                ", totalDistance=" + totalDistance +
+                ", damaged=" + damaged +
+                ", GPS=" + GPS +
+                ", sits=" + sits +
+                ", price=" + price +
+                '}';
     }
 }
 

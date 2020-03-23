@@ -1,7 +1,5 @@
 package org.fasttrackit;
 
-import com.sun.tools.jdeprscan.scan.Scan;
-
 import java.util.Scanner;
 
 
