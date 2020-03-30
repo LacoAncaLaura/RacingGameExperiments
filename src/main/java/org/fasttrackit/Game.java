@@ -25,16 +25,20 @@ public class Game {
         playOneRound();
     }
     private void playOneRound(){
-        System.out.println("New Round");
+        System.out.println("\n2New Round");
 
         //enhanced for (for-each)
         for (Vehicle vehicle: competitors){
+            System.out.println("It" + vehicle.getName() + "`s turn.");
+            double speed = getAccelerationSpeedFromUser();
             vehicle.accelerate(100);
+            }
+
         }
 //        for (Track track : tracks){
 //            System.out.println();
 //        }
-    }
+
 
     private void initializeCompetitors(){
 
@@ -94,5 +98,10 @@ public class Game {
         System.out.println("Please enter number of players");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
+    }
+    private double getAccelerationSpeedFromUser(){
+        System.out.println("Please enter acceleration speed: ");
+        Scanner scanner = new Scanner(System.in);
+        return  scanner.nextDouble();
     }
 }
