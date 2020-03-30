@@ -11,8 +11,13 @@ public class Game {
 
     private Track[]tracks = new Track[3];
     private List<Vehicle> competitors = new ArrayList<>();
+    private Track  selectedTrack;
+    private boolean winnerNotKnown = true;
+    private int competitorsWithoutFuel = 0;
 
-    public  void start(){
+    private boolean winnerNotKnow = true;
+
+    public  void start() {
         System.out.println("Welcome!");
 
 
@@ -23,7 +28,9 @@ public class Game {
         System.out.println("Selected track: " + selectedTrack.getName());
 
         initializeCompetitors();
-        playOneRound();
+        while (winnerNotKnown && competitorsWithoutFuel < competitors.size()) {
+            playOneRound();
+        }
     }
     private void playOneRound(){
         System.out.println("\n2New Round");
@@ -33,6 +40,14 @@ public class Game {
             System.out.println("It" + vehicle.getName() + "`s turn.");
             double speed = getAccelerationSpeedFromUser();
             vehicle.accelerate(100);
+
+            if(selectedTrack.getLenght() <= vehicle.getTotalDistance()){
+                System.out.println("The winner is: " + vehicle.getName());
+                winnerNotKnow = false;
+
+                break;
+            }
+            if (vehicle.getFuelLevel() <= 0);
             }
 
         }
@@ -116,7 +131,7 @@ public class Game {
             return  scanner.nextDouble();
         } catch (InputMismatchException e) {
             System.out.println("You have entered an invalid value.Please try again.");
-            //recursion 
+            //recursion
             return getAccelerationSpeedFromUser();
         }
     }
