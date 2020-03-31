@@ -39,9 +39,9 @@ public class Game {
             double speed = getAccelerationSpeedFromUser();
             vehicle.accelerate(speed);
 
-            if(selectedTrack.getLenght() <= vehicle.getTotalDistance()){
+            if(selectedTrack.getLength() <= vehicle.getTotalDistance()){
                 System.out.println("The winner is: " + vehicle.getName());
-                winnerNotKnow = false;
+                winnerNotKnown = false;
 
                 break;
             }
@@ -76,13 +76,13 @@ public class Game {
     private void initializationTracks(){
         Track track1= new Track();
         track1.setName("Imola");
-        track1.setLand(3500);
+        track1.setLength(3500);
 
         tracks[0] = track1;
 
         Track track2 = new Track();
         track2.setName("Suzuka");
-        track2.setLand(4100);
+        track2.setLength(4100);
 
         tracks[1] = track2;
 
@@ -93,8 +93,7 @@ public class Game {
         //classic for loop
         for (int i = 0; i < tracks.length; i++){
             if (tracks[i] != null){
-            System.out.println((i + 1) + " . " + tracks[i].getName() + " - " + tracks[i].getLand());
-        }
+            System.out.println((i + 1) + " . " + tracks[i].getName() + " - " + tracks[i].getLength()); }
     }}
 
     private  Track getSelectedTrackFromUser(){
