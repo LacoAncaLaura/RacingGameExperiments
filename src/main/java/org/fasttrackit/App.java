@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Hello world!
@@ -8,8 +8,35 @@ import java.util.Scanner;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args )throws Exception
     {
+//        Set<Integer> uniqueInteger = new HashSet<>();
+//        uniqueInteger.add(1);
+//        uniqueInteger.add(2);
+//        uniqueInteger.add(3);
+//
+//        Iterator<Integer> iterator = uniqueInteger.iterator();
+//        while(iterator.hasNext()){
+//        Integer next = iterator.next();
+//          System.out.println(next);
+//    }
+
+//        Map<String,String>families = new HashMap<>();
+//        families.put("Prenumele", "Numele");
+////                      (cheie-valoare unica;valoare)
+//
+//        Map<String , Integer> studentAge = new HashMap<>();
+//        studentAge.put("Flaviu" , 31);
+//        studentAge.put("Sergiu" ,25);
+//
+//        Integer age = studentAge.get("Flaviu");
+//
+//        for(Map.Entry<String,Integer>entry : studentAge.entrySet()){
+//            System.out.println("Key: " + entry.getKey());
+//            System.out.println("Value: " + entry.getValue());
+//        }
+
+
         Game game = new Game();
         game.start();
 
